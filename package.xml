@@ -10,10 +10,11 @@
      (or any IMU) is provided for testing.
   </description>
 
-  <maintainer email="krirobo@gmail.com">Kristof Robot</maintainer>
+  <maintainer email="broerkens@gmail.com">Mark Broerkens</maintainer>
 
   <license>BSD</license>
 
+  <author>Mark Broerkens</author>
   <author>Tang Tiong Yew</author>
   <author>Kristof Robot</author>
   <author>Paul Bouchier</author>

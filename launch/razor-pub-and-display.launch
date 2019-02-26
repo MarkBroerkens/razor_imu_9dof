@@ -3,6 +3,10 @@
   <node pkg="razor_imu_9dof" type="imu_node.py" name="imu_node" output="screen">
     <rosparam file="$(arg razor_config_file)" command="load"/>
   </node>
-  <node pkg="razor_imu_9dof" type="display_3D_visualization.py" name="display_3D_visualization_node" output="screen">
-  </node>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_imu" 
+        args="0.245 0.0 0.117    0.7071067811865475 0.7071067811865475 0.0 0.0 /base_link /base_imu_link" />
+
+    <arg name="gui" default="True" />
+    <param name="use_gui" value="$(arg gui)"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find razor_imu_9dof)/rviz/imu.rviz" required="true" />
 </launch>
